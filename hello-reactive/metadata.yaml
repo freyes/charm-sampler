@@ -1,0 +1,17 @@
+name: hello-reactive
+summary: Hello world of a charm with reactive
+maintainer: Felipe Reyes <felipe.reyes@canonical.com>
+description: |
+  This is a hello world kind of project using reactive.
+tags:
+  # Replace "misc" with one or more whitelisted tags from this list:
+  # https://jujucharms.com/docs/stable/authors-charm-metadata
+  - misc
+series:
+  - xenial
+  - bionic
+  - focal
+subordinate: false
+peers:
+  cluster:
+    interface: cluster

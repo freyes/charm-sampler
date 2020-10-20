@@ -1,0 +1,8 @@
+series: bionic
+applications:
+  hello-classic:
+    charm: ./hello-classic
+    num_units: 1
+  hello-reactive:
+    charm: ./builds/hello-reactive
+    num_units: 1

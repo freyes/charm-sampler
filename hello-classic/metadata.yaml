@@ -1,0 +1,17 @@
+name: hello-classic
+summary: Sample charm using 'classic' charms
+maintainer: Felipe Reyes <felipe.reyes@canonical.com>
+description: |
+  Sample charm using classic charms
+tags:
+  # Replace "misc" with one or more whitelisted tags from this list:
+  # https://jujucharms.com/docs/stable/authors-charm-metadata
+  - misc
+series:
+  - xenial
+  - bionic
+  - focal
+subordinate: false
+peers:
+  cluster:
+    interface: cluster
