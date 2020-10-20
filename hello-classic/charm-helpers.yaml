@@ -2,3 +2,5 @@ destination: lib/charmhelpers
 repo: https://github.com/juju/charm-helpers
 include:
   - core
+  - osplatform
+  - fetch

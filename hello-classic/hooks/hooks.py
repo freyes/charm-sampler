@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import os
 import sys
@@ -9,17 +9,17 @@ from charmhelpers.core import (
     hookenv,
     host,
 )
-
-from start import start
+from charmhelpers.fetch import apt_install
 
 hooks = hookenv.Hooks()
 log = hookenv.log
 
-SERVICE = 'hello-classic'
+SERVICE = 'memcached'
 
 @hooks.hook('install')
 def install():
-    log('Installing hello-classic')
+    log('Installing memcached')
+    apt_install(['memcached'])
 
 
 @hooks.hook('start')
@@ -35,6 +35,7 @@ def stop():
 @hooks.hook('upgrade-charm')
 def upgrade_charm():
     log('Upgrading hello-classic')
+    install()
 
 
 @hooks.hook('cluster-relation-changed')
